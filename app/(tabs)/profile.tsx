@@ -1,25 +1,25 @@
 import { Text, View, StyleSheet, Button } from "react-native";
 import { theme } from "../../theme";
 import { useUserStore } from "@/store/userStore";
+import { PlantlyButton } from "@/components/plantlyButton";
 
-    export default function ProfileScreen() {
-        const toggleHasOnboarded = useUserStore((store) => store.toggleHasOnboarded)
-        return (
+export default function ProfileScreen() {
+  const toggleHasOnboarded = useUserStore((store) => store.toggleHasOnboarded);
+  return (
+    <View style={styles.container}>
+      <PlantlyButton title="let me in" onPress={toggleHasOnboarded} />
+    </View>
+  );
+}
 
-            <View style = {styles.container}>
-                <Button title = "let me in" onPress={toggleHasOnboarded}/>
-            </View>
-        )
-    }
-
-    const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-        backgroundColor: theme.colorWhite,
-    },
-    text: {
-        fontSize: 24
-    }
-   })
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: theme.colorWhite,
+  },
+  text: {
+    fontSize: 24,
+  },
+});
