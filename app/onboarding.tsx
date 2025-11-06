@@ -4,6 +4,7 @@ import { use } from "react";
 import { useUserStore } from "@/store/userStore";
 import { useRouter } from "expo-router";
 import { PlantlyButton } from "@/components/plantlyButton";
+import { LinearGradient } from "expo-linear-gradient";
 
 export default function Onboardingcreen() {
   const router = useRouter();
@@ -13,9 +14,12 @@ export default function Onboardingcreen() {
     router.replace("/");
   };
   return (
-    <View style={styles.container}>
+    <LinearGradient
+      colors={[theme.colorGreen, theme.colorAppleGreen, theme.colorLimeGreen]}
+      style={styles.container}
+    >
       <PlantlyButton title="let me in" onPress={handlePress} />
-    </View>
+    </LinearGradient>
   );
 }
 
