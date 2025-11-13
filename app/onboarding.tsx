@@ -3,7 +3,7 @@ import { theme } from "@/theme";
 import { use } from "react";
 import { useUserStore } from "@/store/userStore";
 import { useRouter } from "expo-router";
-import { PlantlyButton } from "@/components/plantlyButton";
+import { PlantlyButton } from "@/components/PlantlyButton";
 import { LinearGradient } from "expo-linear-gradient";
 import { StatusBar } from "expo-status-bar";
 import { PlantlyImage } from "@/components/PlantlyImage";
